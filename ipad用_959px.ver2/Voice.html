@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="voice_container">
+        <h5>
+            User’s voice
+        </h5>
+        <p class="voice_text">
+            すでに多くのビジネスマンが師弟.comで成長しています
+        </p>
+        <div class="pic-ctn">
+        <img src="image/Voice1.png" class="pic">
+        <img src="image/Voice2.png" class="pic">
+        <img src="image/Voice1.png" class="pic">
+        <img src="image/Voice2.png" class="pic">
+        <img src="image/Voice1.png" class="pic">
+        </div>
+
+        <div class="pic-smp">
+          <div class="profile-card">
+            <div class="profile-card__inner">
+                <div class="profile-thumb">
+                    <img src="image/pro_kitou.png">
+                </div>
+
+                <div class="profile-content">
+                    <div class="pro_icom">
+                        <div class="box">
+                        <i>PRO</i>
+                        </div>
+                        <span class="profile-name">鬼頭 史到</span>
+                    </div>
+                    <span class="profile-job">CEO</span>
+                    <span class="profile-intro">【話せる内容】#起業 #新規事業 #創業者 #教育 #デザイン #UX #組織づくり #ワークショップデザイン#サービス開発 #コンテンツディレクター#コミュニティ#不動産
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="second_stage">
+            <div class="profile-card">
+                <div class="profile-card__inner">
+                    <div class="profile-thumb">
+                        <img src="image/pro_hamasaka.png">
+                    </div>
+
+                    <div class="profile-content">
+                        <div class="pro_icom">
+                        <div class="box">
+                        <i>PRO</i>
+                        </div>
+                        <span class="profile-name">濱坂 愛音</span>
+                        </div>
+                        <span class="profile-job">株式会社10X PM</span>
+                        <span class="profile-intro">【話せる内容】#起業 #新規事業 #創業者 #教育 #デザイン #UX #組織づくり #ワークショップデザイン#サービス開発 #コンテンツディレクター#コミュニティ#不動産
+                        </span>
+                    </div>
+                </div>
+            </div>
+      </div>
+
+        </div>
+        </div>
+    </div> 
+</body>
+</html>
+<style scoped>
+/* ここからがdefault_css */
+    .page-enter {
+        opacity: 0;
+    }
+    .page-enter-active {
+        transition: opacity 2s;
+    }
+    html {
+        font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 16px;
+        word-spacing: 1px;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+    }
+    
+    *, *:before, *:after {
+        box-sizing: border-box;
+        margin: 0;
+    }
+    
+    .button--green {
+        display: inline-block;
+        border-radius: 4px;
+        border: 1px solid #3b8070;
+        color: #3b8070;
+        text-decoration: none;
+        padding: 10px 30px;
+    }
+    
+    .button--green:hover {
+        color: #fff;
+        background-color: #3b8070;
+    }
+    
+    .button--grey {
+        display: inline-block;
+        border-radius: 4px;
+        border: 1px solid #35495e;
+        color: #35495e;
+        text-decoration: none;
+        padding: 10px 30px;
+        margin-left: 15px;
+    }
+    
+    .button--grey:hover {
+        color: #fff;
+        background-color: #35495e;
+    }
+    
+    /* @media (max-width: 479px) {
+        .container{
+        max-width: 375px;
+        }
+    } */
+/* ここまでがdefault_css */
+/* ここからがVoice_css */
+.container{
+height: 100%;
+width: 100%;
+max-width: 1440px;
+margin: 0 auto;
+}
+
+.voice_container{
+text-align: center;
+}
+h5{
+width: 600px;
+transition: all .5s;
+font-size: 72px;
+color: #263440;
+border-bottom:3px solid #263440;
+margin: 0 auto;
+margin-top: 160px;
+}
+
+.voice_text{
+transition: all .5s;
+font-size: 32px;
+font-weight: bold;
+color: #263440;
+}
+
+.pic-ctn{
+width: 100px;
+margin-top: 80px;
+position: relative;
+left: 280px;
+display: block;
+}
+
+.pic-smp{
+  display: none;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+.pic-ctn > img {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: display 10s infinite;
+  width: 1000px;
+  border-radius: 30px;
+box-shadow: 0 2px 5px #ccc;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+
+/* ここまでがVoice_css */
+/* ここからがレスポンシブ（ipad）対応 */
+@media (max-width: 959px) {
+    .container{
+max-width: 959px;
+}
+h5{
+width: 400px;
+font-size: 48px;
+}
+
+.voice_text{
+font-size: 21px;
+}
+
+.pic-ctn{
+width: 66px;
+margin-top: 48px;
+left: 215px;
+display: block;
+}
+
+.pic-ctn > img {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: display 10s infinite;
+  width: 666px;
+  border-radius: 30px;
+box-shadow: 0 2px 5px #ccc;
+}
+} /*ウィンドウ幅が最大959pxまでの場合に適用*/
+/* ここまでがレスポンシブ（ipad）対応 */
+
+
+</style>
+    
